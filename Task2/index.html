@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <button onclick="modalHandler()">Добавить студента</button>
+        <article class="students">
+        </article>
+        <article class="modal">
+            <article class="modal_content">
+                <h1>Добавить студента</h1>
+                <form>
+                    <section class="inputs">
+                        <div class="input">
+                            <label for="name">Имя:</label>
+                            <input type="text" name="name" id="name" placeholder="Введите имя">
+                        </div>
+                        <div class="input">
+                            <label for="surname">Фамилия:</label>
+                            <input type="text" name="surname" id="surname" placeholder="Введите имя">
+                        </div>
+                        <div class="input">
+                            <label for="patronymic">Отчество:</label>
+                            <input type="text" name="patronymic" id="patronymic" placeholder="Введите имя">
+                        </div>
+                        <div class="input">
+                            <label for="study_group">Группа:</label>
+                            <input type="text" name="study_group" id="study_group" placeholder="Введите имя">
+                        </div>
+                        <div class="input">
+                            <label for="bd_date">Дата рождения:</label>
+                            <input type="date" name="bd_date" id="bd_date" placeholder="Введите имя">
+                        </div>
+                    </section>
+                    <input type="submit" value="Добавить">
+                </form>
+                <span onclick="modalHandler()" class="close">
+                    <div></div>
+                </span>
+            </article>
+        </article>
+    </main>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
