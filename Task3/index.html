@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Устанавливаем кодировку и настройки отображения страницы -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Устанавливаем заголовок страницы -->
+    <title>ToDo</title>
+    <!-- Подключаем таблицу стилей для оформления страницы -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Обертка страницы -->
+    <div class="wrapper">
+        <!-- Боковая панель -->
+        <aside>
+            <!-- Календарь -->
+            <article class="calendar">
+                <!-- Заголовок календаря -->
+                <header>
+                    <!-- Кнопка для переключения на предыдущий месяц -->
+                    <button class="prevMonth">&lt;</button>
+                    <!-- Заголовок с текущим месяцем -->
+                    <h3 class="currentMonth"></h3>
+                    <!-- Кнопка для переключения на следующий месяц -->
+                    <button class="nextMonth">&gt;</button>
+                </header>
+                <!-- Контейнер для дней месяца -->
+                <article class="days"></article>
+            </article>
+            <!-- Поле ввода для поиска задач -->
+            <input type="text" placeholder="Найти задачу" name="search" class="search">
+            <!-- Кнопка для отображения задач на текущую дату -->
+            <button onclick="todoApp.getTodayTasks()">Сегодня</button>
+            <!-- Кнопка для отображения задач на следующую неделю -->
+            <button onclick="todoApp.getWeekTasks()">На неделю</button>
+            <!-- Кнопка для отображения всех задач -->
+            <button onclick="todoApp.showAll()">Все</button>
+            <!-- Поле и кнопка для фильтрации по невыполненным задачам -->
+            <article class="undone">
+                <input type="checkbox" name="undone" id="undone">
+                <label for="undone" onclick="todoApp.getIncompleteTasks()"></label>
+            </article>
+        </aside>
+        <!-- Основное содержимое страницы -->
+        <main>
+            <!-- Заголовок блока с задачами -->
+            <article class="title">
+                <h1>Задачи:</h1>
+                <p>Сортировать по дате</p>
+            </article>
+            <!-- Контейнер для списка задач -->
+            <article class="tasks_list"></article>
+            <!-- Сообщение о отсутствии задач на выбранную дату -->
+            <h2 class="no_tasks">На эту дату нету задач.</h2>
+        </main>
+    </div>
+    <!-- Подключаем скрипт для обработки логики страницы -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
