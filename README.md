@@ -41,3 +41,9 @@ java -jar server.jar
 
 ![image](https://github.com/Scheffio/doczilla/assets/45427871/0168811a-be16-47e6-8858-235f6c1cb374)
 
+# Task 3
+
+Для начала, нужно запустить прокси сервер, для обхода CORS политики. Файл ProxyServer.jar находится в папке Task3 -> backend_source. Запускать его можно также, как указано выше. Метод запуска у файлов одинаковый.
+После того как запустили прокси сервер, можно открывать сайт по ссылке [https://scheffio.github.io/doczilla/Task3](https://scheffio.github.io/doczilla/Task3).
+Честно признаюсь, не успел доделать 7, 8, 9 пункты из задания.
+
